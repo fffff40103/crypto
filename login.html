@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /*設定login排版*/
+       
+        /*把最小高度設定為100，超出會調整*/
+        .content{
+            min-height: 100vh;
+        }
+        /*form的輸入框*/
+        
+        form input{
+            background-color: #D9D9D9;
+            width:20vw;
+            padding:0.5rem;
+            margin:1rem;
+                                 
+        }
+        /*登入按鈕設定*/
+        form button{
+            width:20vw;
+            padding:0.5rem;
+            margin:1rem;
+            
+        }
+        form button.loginbutton{
+            background-color: #0047ff;
+        }
+        form button.logingoogle{
+            background-color: white;
+            background-image: url(./img/googlepig.png);
+            background-repeat: no-repeat;
+            background-size:contain ;
+            
+        }
+        .password{
+            position: relative;
+        }
+        
+        .password img{
+            position: absolute;
+            top: 50%;
+            left:65%;
+            transform: translateY(-50%);
+            padding: 0 16px;
+            cursor: pointer;
+        }
+
+        .noaccount{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+       
+
+        
+        /*設定密碼旁邊小眼睛*/
+        
+        
+     
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    
+        <nav class="navbar navbar-expand-lg navbar-light  ">
+            <!--Left side navbar-->
+           <div class="container-fluid mx-5 fs-5  ">
+             <a class="navbar-brand text-dark fs-2 fw-bolder" href="#">ZheZhe</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNavDropdown">
+               <ul class="navbar-nav">
+                 <li class="nav-item">
+                   <a class="nav-link active text-dark" aria-current="page" href="#">Markets</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-dark" href="#">Statistic</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-dark" href="#">Staking</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-dark " href="#">News</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Dropdown link
+                   </a>
+                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <li><a class="dropdown-item text-dark" href="#">Action</a></li>
+                     <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
+                     <li><a class="dropdown-item text-dark" href="#">Something else here</a></li>
+                   </ul>
+                 </li>
+               </ul>
+             </div>
+            
+             <!--rigth side navbar-->
+               <a class="nav-link text-dark" href="#">Assets</a>
+               <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block text-dark"></i>
+               <a class="nav-link text-light text-dark" href="#">username</a>           
+           </div>
+        </nav>
+    
+    
+     <!--Login body-->
+     <div class="container mt-4">
+        <div class="row content">
+          <div class="col login">
+            <h2 class="text-center">Welcome back</h2>
+            <!--Login form-->
+            <form class="text-center" action="">
+                <input class="inputaccount " type="text" placeholder="Account number" >     
+                <br>
+                <div class="password">
+                    <input class="inputpassword" type="password "placeholder="Password">
+                    <img src="./img/notseen.svg" alt="">
+                </div>
+                
+                <br>
+                <button class="loginbutton" type="submit">Login</button>
+                <br>
+                <button class="logingoogle" type="submit">Login with Google</button>
+                <br>
+                <div class="noaccount">
+                    <p>No Account?</p>
+                    <a href="">Sign up</a>
+                </div>
+               
+            </form>
+          </div>
+          <div class="col">
+            Column
+          </div>
+         
+        </div>
+      </div>
+     
+</body>
+</html>
