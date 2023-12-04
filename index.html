@@ -14,6 +14,7 @@
         body{
             background-color: #181a20;
         }
+        /**********************左半邊*************************************/
         /*設定slogn的font-size成5rem*/
         /*set font-size 5 times than default size */
         .slog{
@@ -24,20 +25,27 @@
         .content{
           min-height: 100vh;
         }
+         /**********************右半邊*************************************/
+        /*設定右半邊margin-left:5個字的大小*/
+        .rightpart{
+          margin-left:5rem;
+        }
+
         /*設定最火熱的五檔加密或幣背景顏色以及高度*/
         /*set current price and top three hotest crypto*/
+       
         .cryptoprice{
           color:white;
-          height:45vh;
+          height:35vh;
           background-color: #1E2329;
-          margin-left: 5rem;
           display: flex;
           flex-direction: column;
         }
+        
         /*設定五檔加密或幣圖片高度寬度*/
         div.cryptoprice p img{     
-          width:30px;
-          height:30px;
+          width:2rem;
+          height:2rem;
         }
         /*五檔加密或幣單獨設定*/
         .fivecrypto{
@@ -52,8 +60,10 @@
         .halving{
           margin-top:10rem;
           height:20vh;
-          margin-left: 5rem;
+          background-color: red;
         }
+     
+       
         
         
         
@@ -64,7 +74,7 @@
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light position-sticky ">
+    <nav class="navbar navbar-expand-lg navbar-light ">
              <!--Left side navbar-->
             <div class="container-fluid m-3 fs-5 ">
               <a class="navbar-brand text-light fs-2 fw-bolder" href="#">ZheZhe</a>
@@ -134,7 +144,7 @@
           </div>
         </div>
         <!--Right part-->
-        <div class="col rightpart">
+        <div class="col rightpart ">
           <!--current price and top five hotest crypto(display:column)-->
             <div class="cryptoprice">
               <!--Deep control of five crypto-->
@@ -174,11 +184,12 @@
                  
               
             
-            <!--Day from cut-->
+            
+             </div>
+             <!--Day from cut-->
             <div class="halving fs-1 text-light">
               比特幣距離減半時間24時24分24秒這裡要用javascript
             </div>
-             </div>
         </div>
       </div>
     </div>
