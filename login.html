@@ -15,8 +15,11 @@
         .content{
             min-height: 100vh;
         }
+        /*Login外框設定*/
+        form{
+          border:solid 1px #dadce0;
+        }
         /*form的輸入框*/
-        
         form input{
             background-color: #D9D9D9;
             width:20vw;
@@ -31,9 +34,11 @@
             margin:1rem;
             
         }
+        /*login按鈕設定*/
         form button.loginbutton{
             background-color: #0047ff;
         }
+        /*用google login按鈕設定*/
         form button.logingoogle{
             background-color: white;
             background-image: url(./img/googlepig.png);
@@ -41,10 +46,12 @@
             background-size:contain ;
             
         }
+        /*form表單裡面密碼設定(position)*/
         .password{
             position: relative;
         }
         
+        /*設定密碼旁邊小眼睛*/
         .password img{
             position: absolute;
             top: 50%;
@@ -53,19 +60,12 @@
             padding: 0 16px;
             cursor: pointer;
         }
-
+        /*沒有密碼排版設定*/
         .noaccount{
             display: flex;
             justify-content: space-evenly;
             
         }
-       
-
-        
-        /*設定密碼旁邊小眼睛*/
-        
-        
-     
     </style>
 </head>
 <body>
@@ -117,14 +117,14 @@
      <div class="container mt-4">
         <div class="row content">
           <div class="col login">
-            <h2 class="text-center">Welcome back</h2>
             <!--Login form-->
             <form class="text-center" action="">
+              <h2 class="text-center">Welcome back</h2>
                 <input class="inputaccount " type="text" placeholder="Account number" >     
                 <br>
                 <div class="password">
                     <input class="inputpassword" type="password "placeholder="Password">
-                    <img src="./img/notseen.svg" alt="">
+                    <img src="./img/notseen.svg" alt="" >
                 </div>
                 
                 <br>
@@ -147,4 +147,9 @@
       </div>
      
 </body>
+<script>
+
+
+
+</script>
 </html>
