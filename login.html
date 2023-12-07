@@ -9,22 +9,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        /*設定login排版*/
+        /*********設定login排版***********/
        
-        /*把最小高度設定為100，超出會調整*/
-        .content{
-            min-height: 100vh;
+        /*設定login content的排版方式，以及把它置中*/
+        .login{
+          
+          margin-top:1rem;
+          display: flex;
+          justify-content: center;
         }
         /*Login外框設定*/
         form{
           border:solid 1px #dadce0;
+          padding:2rem;
         }
+
+        
         /*form的輸入框*/
         form input{
             background-color: #D9D9D9;
             width:20vw;
             padding:0.5rem;
             margin:1rem;
+            width:20rem;
                                  
         }
         /*登入按鈕設定*/
@@ -32,6 +39,7 @@
             width:20vw;
             padding:0.5rem;
             margin:1rem;
+            width:20rem;
             
         }
         /*login按鈕設定*/
@@ -55,7 +63,7 @@
         .password img{
             position: absolute;
             top: 50%;
-            left:65%;
+            left:82%;
             transform: translateY(-50%);
             padding: 0 16px;
             cursor: pointer;
@@ -113,38 +121,29 @@
         </nav>
     
     
-     <!--Login body-->
-     <div class="container mt-4">
-        <div class="row content">
-          <div class="col login">
-            <!--Login form-->
-            <form class="text-center" action="">
-              <h2 class="text-center">Welcome back</h2>
-                <input class="inputaccount " type="text" placeholder="Account number" >     
-                <br>
-                <div class="password">
-                    <input class="inputpassword" type="password "placeholder="Password">
-                    <img src="./img/notseen.svg" alt="" >
-                </div>
-                
-                <br>
-                <button class="loginbutton" type="submit">Login</button>
-                <br>
-                <button class="logingoogle" type="submit">Login with Google</button>
-                <br>
-                <div class="noaccount">
-                    <p>No Account?</p>
-                    <a href="">Sign up</a>
-                </div>
-               
-            </form>
+
+     <div class="login">
+      <form class="text-center form-border" action="">
+        <h2 class="text-center">Welcome back</h2>
+          <input class="inputaccount " type="text" placeholder="Account number"  >     
+          <br>
+          <div class="password">
+              <input class="inputpassword" type="password "placeholder="Password" >
+              <img src="./img/notseen.svg" alt="" >
           </div>
-          <div class="col">
-            Column
+          
+          <br>
+          <button class="loginbutton" type="submit">Login</button>
+          <br>
+          <button class="logingoogle" type="submit">Login with Google</button>
+          <br>
+          <div class="noaccount">
+              <p>No Account?</p>
+              <a href="">Sign up</a>
           </div>
          
-        </div>
-      </div>
+      </form>
+     </div>
      
 </body>
 <script>
