@@ -79,7 +79,7 @@
                <a class="nav-link active text-light" aria-current="page" href="#">Markets</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link text-light" href="#">Statistic</a>
+               <a class="nav-link text-light" href="#">Chart</a>
              </li>
              <li class="nav-item">
                <a class="nav-link text-light" href="#">Staking</a>
@@ -190,4 +190,20 @@
 
    </div>
 </body>
+<script>
+  /*對貨幣名稱超過4個字的貨幣位置微調*/
+  adjustPadding()
+  function adjustPadding(){
+    let divElement=document.querySelector(".marketPrice .usdt")
+    console.log(divElement)
+    let firstPelement=divElement.getElementsByTagName("p");
+    let nameTag=firstPelement[0];
+    let priceTag=firstPelement[1];
+    if(nameTag.innerText.length>3){
+      priceTag.style.paddingRight="1rem";
+    }
+    console.log(nameTag.innerText);
+    console.log(priceTag)
+  }
+</script>
 </html>
