@@ -15,23 +15,53 @@
           }
         /*整個加密貨幣價格的parent*/
       .cryptoBody{
-        min-height: 100vh;/*把最小高度設定為100讓他可以往下滑動*/
+        min-height:100vh ;/*設定最小高度為視窗高度大小，如果超出就會增加*/
+
         display: flex;
-        justify-content: center;
+        justify-content: start;
+        flex-direction: column;/*把flex設定為column*/
+        align-items: center;
        
       }
       /*黑色被景色的框框以及標題*/
       .title{
         background-color: #090808;
-        width:80vw;
+        width:80vw;/*把黑框範圍設定成螢幕可視度的80%*/
         height:8vh;   
-        font-size: 2rem;/*設定標題字體大小*/
+        
+
         display: flex;/*設定標題排版*/
         justify-content: space-between;/*設定標題排版*/
+
         color:white;/*標題字體顏色*/
         font-weight: 500;/*設定標題粗度*/
+        font-size: 2rem;/*設定標題字體大小*/
+      }
+      /*把標題裡面的文字左右距離加1rem*/
+      .title p{
+        padding-right:1rem;
+        padding-left:1rem;
       }
 
+      /*設定市場價格排版*/
+      .marketPrice{
+        width:80vw;/*把黑框範圍設定成螢幕可視度的80%*/
+      }
+      /*設定市場價格幣種圖片大小*/
+      .marketPrice img{
+        width:25px;
+        height:25px;
+      }
+      /*在每個不同的幣種相同的uniquePrice設定相同的屬性*/
+      .uniquePrice{
+        display: flex;/*設定標題排版*/
+        justify-content: space-between;/*設定標題排版*/
+
+        font-size:1.5rem;/*設定字體大小*/
+        color:white;
+
+        padding:1rem 1rem 0rem 1rem;/*設定每個價格之間的距離*/
+      }
     </style>
 </head>
 <body>
@@ -86,7 +116,77 @@
             <p>漲跌</p>
         </div>
         <!--市場價格-->
-        <div class="marketPrice"></div>
+        <div class="marketPrice">
+            <!--XRP-->
+            <div class="xrp uniquePrice">
+              <p><img src="./img/xrp.png" alt="">XRP</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <!--BTC-->
+            <div class="btc uniquePrice">
+              <p><img src="./img/bitcoin.png" alt="">BTC</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <!--BNB-->
+            <div class="bnb uniquePrice">
+              <p><img src="./img/bnb.png" alt="">BNB</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <!--ETH-->
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <!--USDT-->
+            <div class="usdt uniquePrice">
+              <p><img src="./img/usdt.png" alt="">USDT</p>
+              <p >50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+             <!--Prisma-->
+             <div class="prisma uniquePrice">
+              <p><img src="./img/prisma-finance.png" alt="">PRIS</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <!--還沒處理-->
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            <div class="eth uniquePrice">
+              <p><img src="./img/eth.png" alt="">ETH</p>
+              <p>50.8$</p>
+              <p style="color:green">22.5%</p>
+            </div>
+            
+            
+        </div>
 
    </div>
 </body>
