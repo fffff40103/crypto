@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Bootstrap setting part-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staking</title>
+    <style>
+         /*把背景顏色設定成:#181a20*/
+        body{
+        
+        background-color: black;
+        }
+        /*設定內容部分排版*/
+       .content{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+       }
+        /*設定餘額部分*/
+       .balance{
+        width:300px;
+        height:300px;
+        border-radius:50%;
+        background-color: #D9D9D9;
+        margin-right: 5rem;
+        background-image: url(./img/usdt.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: auto;
+       }
+        /*設定交易部分表單*/
+       form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+       /*設定交易部分表單的輸入框*/
+       form input{
+        width:20rem;
+        height:3rem;
+        margin: 2rem 0;
+        background-color: #D9D9D9;
+       }
+     /*設定交易部分表單的按鈕*/
+       form button{
+        width:10rem;
+        height:3rem;
+        background-color: #D9D9D9;
+        font-weight: bolder;
+       }
+        /*設定買入以及轉出按鈕*/
+        .transactionButton{
+            display: flex;    
+            justify-content: space-evenly;
+           
+        }
+        /*設定買入以及轉出a標籤*/
+        .transactionButton a{
+            font-size: 2rem;
+            background-color: #D9D9D9;
+            margin:2rem;
+            text-decoration: none;
+            color:black;
+           
+        }
+
+       
+        /*設定nav bar右半邊*/
+        .rightPartNav{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+       
+        
+    </style>
+</head>
+<body>
+   
+    
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light mx-5  ">
+        <!--Left side navbar-->
+       <div class="container-fluid m-3 fs-5 ">
+         <a class="navbar-brand text-light fs-2 fw-bolder" href="#">ZheZhe</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+           <ul class="navbar-nav">
+             <li class="nav-item">
+               <a class="nav-link active text-light" aria-current="page" href="#">Markets</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link text-light" href="#">Chart</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link text-light" href="#">Staking</a>
+             </li>
+           
+             
+           </ul>
+         </div>
+        <!--rigth side navbar-->
+        <div class="rightPartNav">
+            <a class="nav-link text-light" href="#">Assets</a>
+            <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block"></i>
+            <a class="nav-link text-light" href="#">username</a>   
+          </div> 
+       
+      
+    </nav>
+    <!--餘額內容-->
+   <div class="content">
+    <div class="balance">
+
+    </div>
+    <div class="transaction">
+        <form action="">
+            <div class="transactionButton">
+                <div class="buy">
+                    <a href="">買入</a>
+                </div>
+                <div class="transfer">
+                    <a href="">轉出</a>
+                </div>
+            </div>
+            <input type="text" placeholder="From">
+            <input type="text" placeholder="To">
+            <button>提交</button>
+        </form>
+    </div>
+   </div>
+</body>
+</html>

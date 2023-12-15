@@ -68,7 +68,15 @@
             padding: 0 16px;
             cursor: pointer;
         }
-       
+         /*設定nav bar右半邊*/
+        .rightPartNav{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+    
+
     </style>
 </head>
 <body>
@@ -98,9 +106,11 @@
              </div>
             
              <!--rigth side navbar-->
-               <a class="nav-link text-dark" href="#">Assets</a>
-               <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block text-dark"></i>
-               <a class="nav-link text-light text-dark" href="#">username</a>           
+             <div class="rightPartNav">
+              <a class="nav-link text-light" href="#">Assets</a>
+              <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block"></i>
+              <a class="nav-link text-light" href="#">username</a>   
+            </div> 
            </div>
         </nav>
     
