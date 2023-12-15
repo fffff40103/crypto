@@ -13,6 +13,8 @@
         /*Making navbar and background as same color*/
         body{
             background-color: #181a20;
+            -ms-overflow-style: none;
+ 
         }
         /**********************左半邊*************************************/
         /*設定slogn的font-size成5rem*/
@@ -63,12 +65,84 @@
           height:20vh;
           background-color: #1E2329;
         }
-     
-       
+        /*設定nav bar右半邊*/
+        .rightPartNav{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         
+        @media (min-height:800px){
+          .cryptoprice{
+            height:30vh;
+          }
+        }
+
+        @media (min-width:1400px){
+          nav{
+            margin-left: 25rem;
+            margin-right:25rem;
+          }
+        }
+
+        @media (max-width: 990px) {
+            .rightPartNav{
+              display: none;
+            }
+
+            nav {
+              margin-left: 8rem;
+              
+            }
+        }
+
+        @media (max-width: 900px) {
+            
+            .slog{
+              width: 100vw;
+              margin-left: 8rem;
+              font-weight: 300;
+            }
+
+            .cryptoprice{
+              width:100vw;
+              margin-left:5rem;
+            }
+
+            .content{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              
+
+             
+             
+            }
+            .rightpart{
+              margin-right:5rem;
+              margin-top:2rem;
+              
+            }
+
+            .halving{
+              margin-top: 5rem;
+              margin-left:5rem;
+              width:100vw;
+            }
+            body::-webkit-scrollbar {
+              display: none;
+          }
+
+        }
         
-        
-        
+        @media (max-width: 400px){
+          .slog{
+              width: 100vw;
+              margin-left: 10rem;
+              font-weight: 300;
+            }
+        }
        
 
    </style>
@@ -80,8 +154,8 @@
              <!--boostrap設定 grid、margin、font-size-->
             <div class="container-fluid m-3 fs-5 ">
               <a class="navbar-brand text-light fs-2 fw-bolder" href="#">ZheZhe</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -99,14 +173,16 @@
                 </ul>
               </div>
               <!--rigth side navbar-->
-                <a class="nav-link text-light" href="#">Assets</a>
-                <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block"></i>
-                <a class="nav-link text-light" href="#">username</a>           
+                <div class="rightPartNav">
+                  <a class="nav-link text-light" href="#">Assets</a>
+                  <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block"></i>
+                  <a class="nav-link text-light" href="#">username</a>   
+                </div>        
             </div>
     </nav>
     <!--content part-->
-    <div class="container ">
-      <div class="row mt-4 content">
+    <div class="container content ">
+      <div class="row mt-4 ">
         <!--Left part grid-->
         <div class="col ">
           <!--Homepage slogn-->
