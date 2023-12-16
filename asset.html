@@ -114,9 +114,9 @@
     }
 
     /*在螢幕寬度700以上設置與上方距離5的字大小*/
-    @media(min-width:700px){
-      .content{
-        margin-top:5rem;
+    @media(min-width:700px) {
+      .content {
+        margin-top: 5rem;
       }
     }
 
@@ -158,23 +158,19 @@
       }
     }
 
-    /*在寬度為300時讓導覽列的右半邊部分沒有距離，讓user的圖片消失*/
+    /*在寬度為300時讓導覽列的右半邊部分沒有距離*/
     @media(max-width:300px) {
       .navRWD {
         margin-left: 0rem;
       }
-
-      .userIcon {
-        display: none;
-      }
-
-
     }
+
     /*在螢幕寬度400以下時設置買入以及轉出標籤與上方距離*/
     @media(max-width:400px) {
       .transactionButton {
         margin-top: 2rem;
       }
+
       /*設置圓形餘額大小*/
       .balance {
         width: 200px;
@@ -192,6 +188,16 @@
       .buy {
         margin-bottom: 0.5rem;
       }
+
+    }
+
+    /*在螢幕250以下時讓user字體變小*/
+    @media(max-width:250px) {
+
+      .rightPartNav {
+        font-size: 15px;
+      }
+
 
     }
   </style>
