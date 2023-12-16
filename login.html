@@ -81,6 +81,23 @@
           justify-content: center;
           align-items: center;
         }
+
+        /*在寬度340以下時把form裡面的input寬度都顯示為視窗寬度100*/
+       @media(max-width:340px){
+        .formRWD{
+          width:100vw;
+        }
+          
+       }
+       /*在寬度280以下時讓導覽列RWD按鈕可以跟右邊有距離*/
+       @media(max-width:280px){
+        .buttonRWD{
+          margin-right:3rem;
+        }
+        .password img{
+          padding:0 0;
+        }
+       }
     </style>
 </head>
 <body>
@@ -90,7 +107,7 @@
             <!--Left side navbar-->
            <div class="container-fluid mx-5 fs-5  ">
              <a class="navbar-brand text-dark fs-2 fw-bolder" href="#">ZheZhe</a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <button class="navbar-toggler buttonRWD" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -110,7 +127,7 @@
              </div>
             
              <!--rigth side navbar-->
-             <div class="rightPartNav">
+             <div class="rightPartNav d-none">
               <a class="nav-link text-light" href="#">Assets</a>
               <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block"></i>
               <a class="nav-link text-light" href="#">username</a>   
@@ -124,22 +141,22 @@
       <form class="text-center form-border" action="">
         <h2 class="text-center">Welcome back</h2>
            <!--輸入帳號-->
-          <input class="inputaccount " type="text" placeholder="Account number"  >     
+          <input class="inputaccount formRWD" type="text" placeholder="Account number"  >     
           <br>
           <!--輸入密碼的小圖示，案眼睛可以隱藏密碼再點擊一下可以顯示密碼-->
           <div class="password">
-              <input class="inputpassword" type="password "placeholder="Password" >
-              <img src="./img/notseen.svg" alt="" >
+              <input class="inputpassword formRWD" type="password "placeholder="Password" >
+              <img src="./img/notseen.svg " alt="" >
           </div>
           
           <!--login按鈕-->
           <br>
-          <button class="loginbutton" type="submit">Login</button>
+          <button class="loginbutton formRWD" type="submit">Login</button>
           <br>
-          <button class="logingoogle" type="submit">Login with Google</button>
+          <button class="logingoogle formRWD" type="submit">Login with Google</button>
           <br>
           <!--這裡設定如果沒有帳號要註冊的地方-->
-          <div class="noaccount">
+          <div class="noaccount formRWD">
               <p>No Account?</p>
               <a href="">Sign up</a>
           </div>
