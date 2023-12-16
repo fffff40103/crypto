@@ -24,28 +24,33 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
+        /*設定Staking內容排版以及最大寬度為螢幕視窗寬度*/
         .stakingInfo{
             margin-top:1rem ;
             display: flex;
             justify-content: space-evenly;
             width:100vw;
         }
+        /*每個框框都是一個section，設定三個框框的相同屬性*/
         .section{
             border:solid 2px #dadce0;
             width:300px;
             height:150px;
         }
+        /*設置激勵內容的框框*/
         .incentive{
             margin-top:2rem;
             border:solid 2px #dadce0;
             width:400px;
             height:300px
         }
+        /*設定綁定內容的框框*/
         .bondedNumber{
             display: flex;
             justify-content: center;
             padding-top:1rem
         }
+        /*設定綁定內容框框裡面的乙太幣圖片*/
         .bondedToken .bondedNumber img{
             width:3rem;
             height:3rem;
@@ -57,6 +62,52 @@
           justify-content: center;
           align-items: center;
         }
+        /*設定標題左右邊各3個字的距離*/
+        .navRWD{
+            margin-left:3rem;
+            margin-right:3rem'
+        }
+
+        /*在寬度960以下設定排版變成直列排版*/
+        @media(max-width:960px){
+            .stakingInfo{
+                flex-direction: column;
+                width: 100vw;
+                align-items: center;
+            }
+            .stakingInfo div{
+                margin:2rem 0rem;
+            }
+           
+        }
+
+        /*在寬度為380以下把激勵區域的寬度設定為視窗寬度*/
+        @media(max-width:380px){
+            .incentive{
+             width:100vw;  
+            }
+        }
+
+        /*在寬度為320以下時把導覽列的按鈕右邊為3個字的寬度*/
+        @media(max-width:320px){
+            .buttonRWD {
+                margin-right:3rem;
+            }
+        }
+
+        /*在寬度為300以下設置導覽列左右無間距，便且把使用者圖片隱藏*/
+        @media(max-width:300px){
+            .navRWD{
+                margin-left: 0rem;
+            }  
+            .userIcon{
+                display: none;
+            }
+
+           
+        }
+
+
     </style>
 </head>
 <body>
@@ -64,9 +115,9 @@
     
     <nav class="navbar navbar-expand-lg navbar-light  ">
         <!--Left side navbar-->
-       <div class="container-fluid mx-5 fs-5  ">
+       <div class="container-fluid  fs-5 navRWD ">
          <a class="navbar-brand text-dark fs-2 fw-bolder" href="#">ZheZhe</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+         <button class="navbar-toggler buttonRWD" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -87,9 +138,9 @@
         
          <!--rigth side navbar-->
          <div class="rightPartNav">
-            <a class="nav-link text-light" href="#">Assets</a>
-            <i class="bi bi-person-circle text-light h5 mb-0 d-none d-md-block"></i>
-            <a class="nav-link text-light" href="#">username</a>   
+            <a class="nav-link text-dark" href="#">Assets</a>
+            <i class="bi bi-person-circle text-dark h5 mb-0  d-md-block userIcon"></i>
+            <a class="nav-link text-dark" href="#">username</a>   
           </div>         
        </div>
     </nav>

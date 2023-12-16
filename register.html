@@ -68,13 +68,23 @@
             padding: 0 16px;
             cursor: pointer;
         }
-         /*設定nav bar右半邊*/
-        .rightPartNav{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+        
+         /*在寬度340以下時把form裡面的input寬度都顯示為視窗寬度100*/
+        @media(max-width:340px){
+          .formRWD{
+            width:100vw;
+          }
+       }
 
+       /*在寬度280以下時讓導覽列RWD按鈕可以跟右邊有距離*/
+       @media(max-width:280px){
+        .buttonRWD{
+          margin-right:3rem;
+        }
+        .password img{
+          padding:0 0;
+        }
+       }
     
 
     </style>
@@ -86,7 +96,7 @@
             <!--Left side navbar-->
            <div class="container-fluid mx-5 fs-5  ">
              <a class="navbar-brand text-dark fs-2 fw-bolder" href="#">ZheZhe</a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <button class="navbar-toggler buttonRWD" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -120,24 +130,24 @@
       <form class="text-center form-border" action="">
         <h2 class="text-center">Welcome</h2>
            <!--輸入Email或手機密碼申請帳號-->
-          <input class="inputaccount " type="text" placeholder="Phone or Email"  >     
+          <input class="inputaccount formRWD" type="text" placeholder="Phone or Email"  >     
           <br>
           <!--輸入密碼的小圖示，案眼睛可以隱藏密碼再點擊一下可以顯示密碼-->
           <div class="password">
-              <input class="inputpassword" type="password "placeholder="Password" >
+              <input class="inputpassword formRWD" type="password "placeholder="Password" >
               <img src="./img/notseen.svg" alt="" >
           </div>
           <!--確認密碼-->
           <div class="confirm password">
-            <input class="inputpassword" type="password "placeholder="Password" >
+            <input class="inputpassword formRWD" type="password "placeholder="Password" >
             <img src="./img/notseen.svg" alt="" >
          </div>
           
           <!--註冊按鈕-->
           <br>
-          <button class="signupButton" type="submit">Sign up</button>
+          <button class="signupButton formRWD" type="submit">Sign up</button>
           <br>
-          <button class="signupGoogle" type="submit">Sign up with Google</button>
+          <button class="signupGoogle formRWD" type="submit">Sign up with Google</button>
           <br>
           
          
