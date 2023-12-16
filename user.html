@@ -69,12 +69,28 @@
     /*設定市場價格排版*/
     .marketPrice {
       width: 80vw;/*把黑框範圍設定成螢幕可視度的80%*/
-      
-      
     }
 
+    /*把幣價設定成黑色*/
     .marketPrice p{
         color:black;
+    }
+
+    /*設定登出按鈕顯示*/
+    .rightPartNav{
+        position: relative;
+    }
+    .logoutButton{
+        top:2.5rem;
+        position: absolute;
+        width:3vw;
+        height:5vh;
+        background: #f6f6f6;
+        border-radius: 5px;
+    }
+    .logoutButton a{
+        text-decoration: none;
+        color:black
     }
     
 
@@ -98,12 +114,16 @@
       padding: 1rem 1rem 0rem 1rem;/*設定每個價格之間的距離*/
       
     }
-
     /*設定nav bar右半邊*/
     .rightPartNav {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    /*設定使用者圖片*/
+    .rightPartNav i{
+        cursor: pointer;
     }
 
     /*讓導覽列左右各有3個字的距離*/
@@ -207,8 +227,11 @@
       <!--rigth side navbar-->
       <div class="rightPartNav">
         <a class="nav-link text-dark" href="#">Assets</a>
-        <i class="bi bi-person-circle text-dark h5 mb-0  d-md-block userIcon"></i>
+        <i class="bi bi-person-circle text-dark h5 mb-0  d-md-block userIcon" onclick=""></i>
         <a class="nav-link text-dark" href="#">username</a>
+        <div class="logoutButton d-none ">
+            <a href="" onclick="">登出</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -316,9 +339,14 @@
     if (nameTag.innerText.length > 3) {
       priceTag.style.paddingRight = "1rem";
     }
-    console.log(nameTag.innerText);
-    console.log(priceTag)
+    
   }
+  /*設定登出按鈕*/
+  let test=document.querySelector(".userIcon");
+  let test1=document.querySelector(".logoutButton");
+  test.addEventListener("click",(e)=>{
+    test1.classList.toggle("d-none");
+  })
 </script>
 
 </html>

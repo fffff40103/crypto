@@ -91,6 +91,30 @@
       align-items: center;
     }
 
+    /*設定使用者圖片*/
+    .rightPartNav i {
+      cursor: pointer;
+    }
+
+    /*設定登出按鈕顯示*/
+    .rightPartNav {
+      position: relative;
+    }
+
+    .logoutButton {
+      top: 2.5rem;
+      position: absolute;
+      width: 3vw;
+      height: 5vh;
+      background: #f6f6f6;
+      border-radius: 5px;
+    }
+
+    .logoutButton a {
+      text-decoration: none;
+      color: black
+    }
+
     /*讓input的placeholder致中*/
     input::placeholder {
       text-align: center;
@@ -238,6 +262,9 @@
         <a class="nav-link text-light" href="#">Assets</a>
         <i class="bi bi-person-circle text-light h5 mb-0  d-md-block userIcon"></i>
         <a class="nav-link text-light" href="#">username</a>
+        <div class="logoutButton d-none ">
+          <a href="" onclick="">登出</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -263,5 +290,14 @@
     </div>
   </div>
 </body>
+<script>
+
+  /*設定登出按鈕*/
+  let test = document.querySelector(".userIcon");
+  let test1 = document.querySelector(".logoutButton");
+  test.addEventListener("click", (e) => {
+    test1.classList.toggle("d-none");
+  })
+</script>
 
 </html>
