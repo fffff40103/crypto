@@ -27,17 +27,18 @@
       align-items: center;
 
     }
+
     /*設定台幣計價為半透明*/
-    .amount .TWD{
-        opacity: 0.5;
+    .amount .TWD {
+      opacity: 0.5;
     }
 
     /*設定餘額屬性*/
-    .amount{
-        background-color: #f6f6f6;
-        width: 80vw;
-        height: 20vh;
-        border-radius:10px;
+    .amount {
+      background-color: #f6f6f6;
+      width: 80vw;
+      height: 20vh;
+      border-radius: 10px;
     }
 
     /*黑色被景色的框框以及標題*/
@@ -68,31 +69,34 @@
 
     /*設定市場價格排版*/
     .marketPrice {
-      width: 80vw;/*把黑框範圍設定成螢幕可視度的80%*/
+      width: 80vw;
+      /*把黑框範圍設定成螢幕可視度的80%*/
     }
 
     /*把幣價設定成黑色*/
-    .marketPrice p{
-        color:black;
+    .marketPrice p {
+      color: black;
     }
 
     /*設定登出按鈕顯示*/
-    .rightPartNav{
-        position: relative;
+    .rightPartNav {
+      position: relative;
     }
-    .logoutButton{
-        top:2.5rem;
-        position: absolute;
-        width:3vw;
-        height:5vh;
-        background: #f6f6f6;
-        border-radius: 5px;
+
+    .logoutButton {
+      top: 2.5rem;
+      position: absolute;
+      width: 3vw;
+      height: 5vh;
+      background: #f6f6f6;
+      border-radius: 5px;
     }
-    .logoutButton a{
-        text-decoration: none;
-        color:black
+
+    .logoutButton a {
+      text-decoration: none;
+      color: black
     }
-    
+
 
     /*設定市場價格幣種圖片大小*/
     .marketPrice img {
@@ -102,18 +106,23 @@
 
     /*在每個不同的幣種相同的uniquePrice設定相同的屬性*/
     .uniquePrice {
-      display: flex;/*設定標題排版*/
-      
-      justify-content: space-between;/*設定標題排版*/
-      
+      display: flex;
+      /*設定標題排版*/
 
-      font-size: 1.5rem; /*設定字體大小*/
-     
+      justify-content: space-between;
+      /*設定標題排版*/
+
+
+      font-size: 1.5rem;
+      /*設定字體大小*/
+
       color: white;
 
-      padding: 1rem 1rem 0rem 1rem;/*設定每個價格之間的距離*/
-      
+      padding: 1rem 1rem 0rem 1rem;
+      /*設定每個價格之間的距離*/
+
     }
+
     /*設定nav bar右半邊*/
     .rightPartNav {
       display: flex;
@@ -122,8 +131,8 @@
     }
 
     /*設定使用者圖片*/
-    .rightPartNav i{
-        cursor: pointer;
+    .rightPartNav i {
+      cursor: pointer;
     }
 
     /*讓導覽列左右各有3個字的距離*/
@@ -155,44 +164,66 @@
       }
     }
 
-    
+    /*登出按鈕RWD設定*/
+    @media(max-width:1170px) {
+      .logoutButton {
+        height: 10vh;
+
+      }
+    }
+
+    @media(max-width:800px) {
+      .logoutButton {
+        height: 10vh;
+        width: 5vw;
+      }
+    }
+
+    @media(max-width:330px) {
+      .logoutButton {
+        width: 8vw;
+      }
+    }
+
+
     /*在寬度在365以下時把標題背景寬度設定為視窗最大寬度*/
     @media(max-width:365px) {
       .title {
         width: 100vw;
-        font-size: 1.5rem;/*把標題字體縮小做RWD*/
+        font-size: 1.5rem;
+        /*把標題字體縮小做RWD*/
         font-weight: 200;
       }
     }
 
     /*在螢幕寬度350以下時讓幣價都呈現為螢幕最大寬度，並且把字體縮小*/
-    @media(max-width:350px){
-      .marketPrice{
+    @media(max-width:350px) {
+      .marketPrice {
         width: 100vw;
       }
-      .uniquePrice p{
-        font-size:1rem;
+
+      .uniquePrice p {
+        font-size: 1rem;
       }
 
-      .amount{
+      .amount {
         width: 100vw;
         text-align: center;
       }
     }
 
     /*在螢幕250以下時讓標題高度為11vh並且讓user字體變小*/
-    @media(max-width:250px){
+    @media(max-width:250px) {
       .title {
         height: 11vh;
       }
-      .rightPartNav{
-        font-size:15px;
-      }
-      
-      
-    }
 
-    
+      .rightPartNav {
+        font-size: 15px;
+      }
+
+
+    }
   </style>
 </head>
 
@@ -230,21 +261,21 @@
         <i class="bi bi-person-circle text-dark h5 mb-0  d-md-block userIcon" onclick=""></i>
         <a class="nav-link text-dark" href="#">username</a>
         <div class="logoutButton d-none ">
-            <a href="" onclick="">登出</a>
+          <a href="" onclick="">登出</a>
         </div>
       </div>
     </div>
   </nav>
   <!--錢包餘額-->
-  
-    
+
+
   </div>
   <!--Crpto行情以及標題內容-->
   <div class="cryptoBody">
     <div class="amount">
-        <p>總資產</p>
-        <h2>20.2USDT</h2>
-        <p class="TWD">≈NT$6.83</p>
+      <p>總資產</p>
+      <h2>20.2USDT</h2>
+      <p class="TWD">≈NT$6.83</p>
     </div>
     <!--Crypto標題-->
     <div class="title">
@@ -339,12 +370,12 @@
     if (nameTag.innerText.length > 3) {
       priceTag.style.paddingRight = "1rem";
     }
-    
+
   }
   /*設定登出按鈕*/
-  let test=document.querySelector(".userIcon");
-  let test1=document.querySelector(".logoutButton");
-  test.addEventListener("click",(e)=>{
+  let test = document.querySelector(".userIcon");
+  let test1 = document.querySelector(".logoutButton");
+  test.addEventListener("click", (e) => {
     test1.classList.toggle("d-none");
   })
 </script>

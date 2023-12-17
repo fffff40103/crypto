@@ -100,6 +100,27 @@
 
         }
 
+        /*登出按鈕RWD設定*/
+        @media(max-width:1170px) {
+            .logoutButton {
+                height: 10vh;
+
+            }
+        }
+
+        @media(max-width:800px) {
+            .logoutButton {
+                height: 10vh;
+                width: 5vw;
+            }
+        }
+
+        @media(max-width:330px) {
+            .logoutButton {
+                width: 8vw;
+            }
+        }
+
         /*在寬度960以下設定排版變成直列排版*/
         @media(max-width:960px) {
             .stakingInfo {
@@ -113,6 +134,7 @@
             }
 
         }
+
 
         /*在寬度為380以下把激勵區域的寬度設定為視窗寬度*/
         @media(max-width:380px) {
@@ -222,12 +244,12 @@
     </div>
 </body>
 <script>
-   /*設定登出按鈕*/
-  let test = document.querySelector(".userIcon");
-  let test1 = document.querySelector(".logoutButton");
-  test.addEventListener("click", (e) => {
-    test1.classList.toggle("d-none");
-  })
+    /*設定登出按鈕*/
+    let test = document.querySelector(".userIcon");
+    let test1 = document.querySelector(".logoutButton");
+    test.addEventListener("click", (e) => {
+        test1.classList.toggle("d-none");
+    })
 </script>
 
 </html>

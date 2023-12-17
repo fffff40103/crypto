@@ -139,9 +139,9 @@
 
 
     /*設定登出按鈕*/
-    let test=document.querySelector(".userIcon");
-    let test1=document.querySelector(".logoutButton");
-    test.addEventListener("click",(e)=>{
+    let test = document.querySelector(".userIcon");
+    let test1 = document.querySelector(".logoutButton");
+    test.addEventListener("click", (e) => {
       test1.classList.toggle("d-none");
     })
   </script>
@@ -175,42 +175,68 @@
     }
 
     /*設定使用者圖片*/
-    .rightPartNav i{
-        cursor: pointer;
+    .rightPartNav i {
+      cursor: pointer;
     }
 
     /*設定登出按鈕顯示*/
-    .rightPartNav{
-        position: relative;
-    }
-    .logoutButton{
-        top:2.5rem;
-        position: absolute;
-        width:3vw;
-        height:5vh;
-        background: #f6f6f6;
-        border-radius: 5px;
-    }
-    .logoutButton a{
-        text-decoration: none;
-        color:black
+    .rightPartNav {
+      position: relative;
     }
 
-    @media(max-width:950px){
-      
-      .chartRWD{
+    .logoutButton {
+      top: 2.5rem;
+      position: absolute;
+      width: 3vw;
+      height: 5vh;
+      background: #f6f6f6;
+      border-radius: 5px;
+    }
+
+    .logoutButton a {
+      text-decoration: none;
+      color: black
+    }
+
+
+    /*登出按鈕RWD設定*/
+    @media(max-width:1170px) {
+      .logoutButton {
+        height: 10vh;
+
+      }
+    }
+
+    @media(max-width:800px) {
+      .logoutButton {
+        height: 10vh;
+        width: 5vw;
+      }
+    }
+
+    @media(max-width:330px) {
+      .logoutButton {
+        width: 8vw;
+      }
+    }
+
+    @media(max-width:950px) {
+
+      .chartRWD {
         margin-left: 5rem;
-        margin-right:5rem;
+        margin-right: 5rem;
         width: 100vw;
       }
-      .upperChart{
-        
+
+      .upperChart {
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      .bottomChart{
-        
+
+      .bottomChart {
+
         margin-top: 2rem;
         margin-bottom: 2rem;
         flex-direction: column;
@@ -226,11 +252,14 @@
       }
     }
 
-    @media(max-width:400px){
-      #columnChart_div{
+
+
+    @media(max-width:400px) {
+      #columnChart_div {
         width: 100vw;
       }
     }
+
     /*在寬度為320時讓導覽列的button右邊有3個字的距離*/
     @media(max-width:320px) {
       .buttonRWD {

@@ -102,15 +102,16 @@
     .logoutButton {
       top: 2.5rem;
       position: absolute;
-      width: 3vw;
-      height: 5vh;
       background: #f6f6f6;
       border-radius: 5px;
+
     }
 
     .logoutButton a {
       text-decoration: none;
-      color: black
+      color: black;
+
+
     }
 
     /*讓導覽列左右各有3個字的距離*/
@@ -120,6 +121,21 @@
 
     }
 
+    /*登出按鈕RWD設定*/
+    
+
+    @media(max-width:800px) {
+      .logoutButton {
+        height: 10vh;
+        width: 5vw;
+      }
+    }
+
+    @media(max-width:330px) {
+      .logoutButton {
+        width: 8vw;
+      }
+    }
 
     /*在寬度為450時讓導覽列左右沒有距離*/
     @media(max-width:450px) {
@@ -317,14 +333,15 @@
     console.log(priceTag)
   }
 
-   /*設定登出按鈕*/
-   let test = document.querySelector(".userIcon");
+  /*設定登出按鈕*/
+  let test = document.querySelector(".userIcon");
   let test1 = document.querySelector(".logoutButton");
   test.addEventListener("click", (e) => {
     test1.classList.toggle("d-none");
+
   })
 
-  
+
 </script>
 
 </html>
