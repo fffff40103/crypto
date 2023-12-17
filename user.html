@@ -9,6 +9,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
+    /*
+    Css RWD排版規則，由大排到小，同屬性的話會單獨排，如果只有單一屬性會在最下面   
+    */
+
+
     /*把背景顏色設定成:#181a20*/
     body {
 
@@ -78,7 +83,7 @@
       color: black;
     }
 
-    /*設定登出按鈕顯示*/
+    /*設定登出按鈕顯示，對父標籤進行相對定位*/
     .rightPartNav {
       position: relative;
     }
@@ -109,13 +114,14 @@
       display: flex;
       /*設定標題排版*/
 
+
       justify-content: space-between;
       /*設定標題排版*/
 
+      align-items: center;
 
       font-size: 1.5rem;
       /*設定字體大小*/
-
       color: white;
 
       padding: 1rem 1rem 0rem 1rem;
@@ -142,27 +148,41 @@
 
     }
 
-
-    /*在寬度為450時讓導覽列左右沒有距離*/
-    @media(max-width:450px) {
-      nav {
-        margin-left: 0rem;
-      }
+    /*對每個幣價的買入、賣出按鈕進行調整*/
+    .uniquePrice button {
+      font-size: 1rem;
     }
 
-    /*在寬度為320時讓導覽列的button右邊有3個字的距離*/
-    @media(max-width:320px) {
-      .buttonRWD {
-        margin-right: 3rem;
-      }
+    /*標題的單獨設定*/
+    .cPriceRWD {
+      margin-right: 1rem;
     }
 
-    /*在寬度為300時讓導覽列的右半邊部分沒有距離*/
-    @media(max-width:300px) {
-      .navRWD {
-        margin-left: 0rem;
-      }
+    /*對標題的數量進行調整*/
+    .numbersRWD {
+      margin-left: 1rem;
     }
+   /*對標題的交易進行調整*/
+    .transRWD {
+      margin-right: 0.5rem;
+    }
+
+
+
+
+    .title {
+      margin-right: 1.5rem;
+    }
+
+
+
+
+
+
+
+
+
+
 
     /*登出按鈕RWD設定*/
     @media(max-width:1170px) {
@@ -184,20 +204,29 @@
         width: 8vw;
       }
     }
-
-
-    /*在寬度在365以下時把標題背景寬度設定為視窗最大寬度*/
-    @media(max-width:365px) {
+    /*在寬度600以下設定標題字體為1.5個字的大小*/
+    @media(max-width:600px) {
       .title {
-        width: 100vw;
         font-size: 1.5rem;
-        /*把標題字體縮小做RWD*/
-        font-weight: 200;
       }
     }
 
-    /*在螢幕寬度350以下時讓幣價都呈現為螢幕最大寬度，並且把字體縮小*/
-    @media(max-width:350px) {
+    /*在寬度500以下設定標題背景寬度為螢幕寬度，以及設定左右間距*/
+    @media(max-width:500px) {
+      .title {
+        width: 100vw;
+        margin-left: 0rem;
+        margin-right: 0rem;
+      }
+    }
+
+    /*在螢幕寬度500以下時讓幣價都呈現為螢幕最大寬度，並且把字體縮小*/
+    @media(max-width:500px) {
+
+      .test {
+        margin-right: 2rem;
+      }
+
       .marketPrice {
         width: 100vw;
       }
@@ -209,6 +238,56 @@
       .amount {
         width: 100vw;
         text-align: center;
+      }
+    }
+
+    /*在寬度為450時讓導覽列左右沒有距離*/
+    @media(max-width:450px) {
+      nav {
+        margin-left: 0rem;
+      }
+    }
+
+    /*在寬度在365以下時把標題背景寬度設定為視窗最大寬度*/
+    @media(max-width:365px) {
+      .title {
+        width: 100vw;
+        font-size: 1.5rem;
+        /*把標題字體縮小做RWD*/
+        font-weight: 200;
+      }
+    }
+
+    /*在螢幕寬度為360以下時設定標題與下列幣價有1個字的距離*/
+    @media(max-width:360px) {
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /*在寬度為320時讓導覽列的button右邊有3個字的距離*/
+    @media(max-width:320px) {
+      .buttonRWD {
+        margin-right: 3rem;
+      }
+    }
+
+    /*在寬度為300時讓導覽列的右半邊部分沒有距離*/
+    @media(max-width:300px) {
+      .navRWD {
+        margin-left: 0rem;
+      }
+
+      .marketPrice {
+        width: 100vw;
+      }
+    }
+
+    /*在寬度270以下時標題列設置都不要有左右間距*/
+    @media(max-width:270px) {
+      .title p {
+        margin-left: 0rem;
+        margin-right: 0rem;
       }
     }
 
@@ -279,9 +358,10 @@
     </div>
     <!--Crypto標題-->
     <div class="title">
-      <p>幣種</p>
-      <p>數量</p>
-      <p>現價</p>
+      <p class="commonRWD cryptoRWD">幣種</p>
+      <p class="commonRWD numbersRWD ">數量</p>
+      <p class="commonRWD cPriceRWD test">現價</p>
+      <p class="commonRWD transRWD test">交易</p>
     </div>
     <!--市場價格-->
     <div class="marketPrice">
@@ -290,67 +370,116 @@
         <p><img src="./img/xrp.png" alt="">XRP</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <!--BTC-->
       <div class="btc uniquePrice">
         <p><img src="./img/bitcoin.png" alt="">BTC</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <!--BNB-->
       <div class="bnb uniquePrice">
         <p><img src="./img/bnb.png" alt="">BNB</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <!--ETH-->
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div>
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <!--USDT-->
       <div class="usdt uniquePrice">
         <p><img src="./img/usdt.png" alt="">USDT</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
+
       </div>
       <!--Prisma-->
       <div class="prisma uniquePrice">
         <p><img src="./img/prisma-finance.png" alt="">PRIS</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <!--還沒處理-->
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
       <div class="eth uniquePrice">
         <p><img src="./img/eth.png" alt="">ETH</p>
         <p>22569</p>
         <p style="color:green">50.8$</p>
+        <div class="trans">
+          <button>買入</button>
+          <button>賣出</button>
+        </div>
       </div>
 
 
@@ -360,7 +489,7 @@
 </body>
 <script>
   /*對貨幣名稱超過4個字的貨幣位置微調*/
-  adjustPadding()
+
   function adjustPadding() {
     let divElement = document.querySelector(".marketPrice .usdt")
     console.log(divElement)
